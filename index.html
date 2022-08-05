@@ -35,7 +35,7 @@
                 <a href="mailto:alexandermoralesllanos1@gmail.com" type="button" class="btn btn-outline-primary">
                     alexandermoralesllanos1@gmail.com
                 </a>
-                <p class="lead" id="frase">
+                <p class="lead" id="phrase">
                     Enjoys the art of code, hard work is my thing.
                 </p>
             </div>
@@ -82,7 +82,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Me</a>
+                    <a class="nav-link" href="javascript:loadContactMe()" id="nav_contactme">Contact Me</a>
                 </li>
             </ul>
         </nav>
@@ -94,40 +94,52 @@
     </div>
 
     <!-- Formulario de contact me -->
+
     <div class="container my-5">
+        <h4 class="mb-3" id="contact_tag">
+            Contact Me
+        </h4>
         <div class="card ">
             <div class="card-body mb-3">
-                <div class="row row-sm-offset">
-                    <div class="col-md-4 multi-horizontal" data-for="name">
-                        <div class="form-group">
-                            <label class="form-control-label mbr-fonts-style display-7" for="name-form1-4">Name</label>
-                            <input type="text" class="form-control" name="name" data-form-field="Name" required=""
-                                id="name-form1-4">
+                <form name="contact" method="POST" data-netlify="true">
+                    <div class="row row-sm-offset">
+                        <div class="col-md-4 multi-horizontal" data-for="name">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7" for="name-form">Name</label>
+                                <input type="text" class="form-control" name="name" data-form-field="Name" required=""
+                                    id="name-form">
+                            </div>
+                        </div>
+                        <div class="col-md-4 multi-horizontal" data-for="email">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7"
+                                    for="email-form">Email</label>
+                                <input type="email" class="form-control" name="email" data-form-field="Email"
+                                    required="" id="email-form">
+                            </div>
+                        </div>
+                        <div class="col-md-4 multi-horizontal" data-for="phone">
+                            <div class="form-group">
+                                <label class="form-control-label mbr-fonts-style display-7"
+                                    for="phone-form">Phone</label>
+                                <input type="tel" class="form-control" name="phone" data-form-field="Phone"
+                                    id="phone-form">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 multi-horizontal" data-for="email">
-                        <div class="form-group">
-                            <label class="form-control-label mbr-fonts-style display-7"
-                                for="email-form1-4">Email</label>
-                            <input type="email" class="form-control" name="email" data-form-field="Email" required=""
-                                id="email-form1-4">
-                        </div>
-                    </div>
-                    <div class="col-md-4 multi-horizontal" data-for="phone">
-                        <div class="form-group">
-                            <label class="form-control-label mbr-fonts-style display-7"
-                                for="phone-form1-4">Phone</label>
-                            <input type="tel" class="form-control" name="phone" data-form-field="Phone"
-                                id="phone-form1-4">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="form-group" data-for="message">
-                    <label class="form-control-label mbr-fonts-style display-7" for="message-form1-4">Message</label>
-                    <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message"
-                        id="message-form1-4"></textarea>
-                </div>
+                    <div class="form-group mb-3" data-for="message">
+                        <label class="form-control-label mbr-fonts-style display-7" for="message-form">Message</label>
+                        <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message"
+                            id="message-form"></textarea>
+                    </div>
+                    <div class="field">
+                        <div data-netlify-recaptcha="true">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
         </div>
     </div>
