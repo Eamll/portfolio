@@ -1,6 +1,6 @@
 //Light switch
-
-$("#container1").load("/pages/home/home_en.html");
+var container1 = $("#container1");
+container1.load("/pages/home/home_en.html");
 var lightswitch = document.getElementById('lightSwitch');
 var switchStatus = false;
 
@@ -23,8 +23,6 @@ $("#lightSwitch").on('change', function () {
 
 //Load pages
 
-
-
 function replaceClass(id, oldClass, newClass) {
     var elem = $(`#${id}`);
 
@@ -39,11 +37,11 @@ function loadHome() {
     replaceClass("nav_contactme", "nav-link active", "nav-link");
     switch (lng) {
         case "en":
-            $("#container1").load("/pages/home/home_en.html");
+            container1.load("/pages/home/home_en.html");
             break;
 
         case "es":
-            $("#container1").load("/pages/home/home_es.html");
+            container1.load("/pages/home/home_es.html");
             break;
     }
 
@@ -57,11 +55,11 @@ function loadAboutme() {
 
     switch (lng) {
         case "en":
-            $("#container1").load("/pages/about-me/about-me-en.html");
+            container1.load("/pages/about-me/about-me-en.html");
             break;
 
         case "es":
-            $("#container1").load("/pages/about-me/about-me-es.html");
+            container1.load("/pages/about-me/about-me-es.html");
             break;
     }
 }
@@ -70,7 +68,7 @@ function loadContactMe() {
     replaceClass("nav_home", "nav-link active", "nav-link");
     replaceClass("nav_aboutme", "nav-link active", "nav-link");
     replaceClass("nav_contactme", "nav-link", "nav-link active");
-    $("#container1").empty();
+    container1.empty();
 }
 
 //Change language
@@ -94,9 +92,9 @@ function loadlang() {
             $("#phone_label").html("Phone");
 
             if (isPillActive("nav_home")) {
-                $("#container1").load("/pages/home/home_en.html");
+                container1.load("/pages/home/home_en.html");
             } else if (isPillActive("nav_aboutme")) {
-                $("#container1").load("/pages/about-me/about-me-en.html");
+                container1.load("/pages/about-me/about-me-en.html");
             }
             break;
         case "es":
@@ -107,9 +105,9 @@ function loadlang() {
             $("#phone_label").html("Teléfono/Celular");
             // frase.innerHTML = "Disfruto el arte del codigo, el trabajo duro es lo mío.";
             if (isPillActive("nav_home")) {
-                $("#container1").load("/pages/home/home_es.html");
+                container1.load("/pages/home/home_es.html");
             } else if (isPillActive("nav_aboutme")) {
-                $("#container1").load("/pages/about-me/about-me-es.html");
+                container1.load("/pages/about-me/about-me-es.html");
             }
             break;
     }
