@@ -81,15 +81,20 @@ function isPillActive(id) {
 }
 
 function loadlang() {
-    var lng = document.getElementById("langselector").value;
+    var lng = $("#langselector").value;
+    var phrase = $("#phrase");
+    var contact_tag = $("#contact_tag");
+    var name_label = $("#name_label");
+    var email_label = $("#email_label");
+    var phone_label = $("#phone_label");
 
     switch (lng) {
         case "en":
-            $("#phrase").html("Enjoys the art of code, hard work is my thing.");
-            $("#contact_tag").html("Contact Me");
-            $("#name_label").html("Name");
-            $("#email_label").html("Email");
-            $("#phone_label").html("Phone");
+            phrase.html("Enjoys the art of code, hard work is my thing.");
+            contact_tag.html("Contact Me");
+            name_label.html("Name");
+            email_label.html("Email");
+            phone_label.html("Phone");
 
             if (isPillActive("nav_home")) {
                 container1.load("/pages/home/home_en.html");
@@ -98,11 +103,11 @@ function loadlang() {
             }
             break;
         case "es":
-            $("#phrase").html("Disfruto el arte del codigo, el trabajo duro es lo mío.");
-            $("#contact_tag").html("Contáctame");
-            $("#name_label").html("Nombre");
-            $("#email_label").html("Correo");
-            $("#phone_label").html("Teléfono/Celular");
+            phrase.html("Disfruto el arte del codigo, el trabajo duro es lo mío.");
+            contact_tag.html("Contáctame");
+            name_label.html("Nombre");
+            email_label.html("Correo");
+            phone_label.html("Teléfono/Celular");
             // frase.innerHTML = "Disfruto el arte del codigo, el trabajo duro es lo mío.";
             if (isPillActive("nav_home")) {
                 container1.load("/pages/home/home_es.html");
