@@ -81,7 +81,9 @@ function isPillActive(id) {
 }
 
 function loadlang() {
-    var lng = $("#langselector").value;
+    var lng = $("#langselector").val();
+    // var lng = document.getElementById("langselector").value;
+    // console.log("Apretaste");
     var phrase = $("#phrase");
     var contact_tag = $("#contact_tag");
     var name_label = $("#name_label");
@@ -90,6 +92,7 @@ function loadlang() {
 
     switch (lng) {
         case "en":
+            // console.log("EN");
             phrase.html("Enjoys the art of code, hard work is my thing.");
             contact_tag.html("Contact Me");
             name_label.html("Name");
@@ -103,6 +106,7 @@ function loadlang() {
             }
             break;
         case "es":
+            console.log("ES");
             phrase.html("Disfruto el arte del codigo, el trabajo duro es lo mío.");
             contact_tag.html("Contáctame");
             name_label.html("Nombre");
