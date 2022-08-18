@@ -1,6 +1,11 @@
+:root {
+    color-scheme: only light;
+}
+
 #lightSwitch {
     transform: scale(1.8);
 }
+
 
 .custom-theme.bg-light {
     background-color: darkslategray !important;
