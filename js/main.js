@@ -9,7 +9,7 @@ const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches
 //     darkmode.inDarkMode = false;
 // }
 if (prefersDarkMode) {
-    darkmode.inDarkMode = true
+    darkmode.inDarkMode = true;
     switchStatus = false;
     $("#lightSwitch").prop("checked", false);
 }
@@ -111,7 +111,7 @@ function loadlang() {
             }
             break;
         case "es":
-            console.log("ES");
+            // console.log("ES");
             phrase.html("Disfruto el arte del codigo, el trabajo duro es lo mío.");
             contact_tag.html("Contáctame");
             name_label.html("Nombre");
