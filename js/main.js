@@ -8,10 +8,11 @@ const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches
 // if (darkmode.inDarkMode && lightswitch == true) {
 //     darkmode.inDarkMode = false;
 // }
-// if (prefersDarkMode) {
-//     darkmode.inDarkMode = true
-//     switchStatus = false;
-// }
+if (prefersDarkMode) {
+    darkmode.inDarkMode = true
+    switchStatus = false;
+    $("#lightSwitch").prop("checked", false);
+}
 
 
 $("#lightSwitch").on('change', function () {
